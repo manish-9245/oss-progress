@@ -1,0 +1,7 @@
+{
+  "name": "oss-progress",
+  "compatibility_date": "2026-09-25",
+  "assets": {
+    "directory": "./dist"
+  }
+}
