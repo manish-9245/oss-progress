@@ -49,7 +49,7 @@ for line in text.splitlines():
     st = status.upper()
     if st.startswith("LOST"):
         cls = "lost"
-    elif "PR OPEN" in st:
+    elif "PR OPEN" in st or "PR DRAFT" in st:
         cls = "open"
     elif st.startswith("CLAIMED"):
         cls = "claimed"
