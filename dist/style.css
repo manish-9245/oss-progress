@@ -1,0 +1,69 @@
+/* Tokens first. Change the colours here and nowhere else. */
+:root{
+  --page:#fbfbf8; --ink:#1b2438; --soft:#55607a; --rule:#d5dbe6; --pen:#a3221f; --margin:#d9a39f;
+  --open:#1d4a8c; --merged:#23663c; --closed:#8a3a2c; --draft:#55607a; --focus:#b15400;
+  --read:"Charter","Iowan Old Style",Georgia,"Times New Roman",serif;
+  --small:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --gutter:6.2rem; --measure:40rem;
+}
+@media (prefers-color-scheme:dark){
+  :root{--page:#14161b; --ink:#e4e7ee; --soft:#a4adc0; --rule:#2d3340; --pen:#ff9f98; --margin:#6b3d3a;
+    --open:#8db8f0; --merged:#8fd5a3; --closed:#f0a698; --draft:#a4adc0; --focus:#ffb454}
+}
+*{box-sizing:border-box}
+html{font-size:112.5%;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--page);color:var(--ink);font-family:var(--read);line-height:1.55}
+.page{max-width:calc(var(--measure) + var(--gutter));margin:0 auto;padding:3.2rem 1.25rem 3rem}
+a{color:var(--ink);text-decoration-thickness:1px;text-underline-offset:.2em;text-decoration-color:var(--soft)}
+a:hover{text-decoration-thickness:2px}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:2px}
+.skip{position:absolute;left:-999px;top:0;background:var(--page);color:var(--ink);padding:.5rem .9rem;border:2px solid var(--focus)}
+.skip:focus{left:.5rem;top:.5rem;z-index:5}
+
+h1{font-size:2.1rem;line-height:1.15;margin:0 0 1rem;padding-left:var(--gutter);font-weight:700;letter-spacing:-.01em}
+h2{font-size:1.1rem;margin:3rem 0 .9rem;padding-left:var(--gutter);font-weight:700}
+.intro,.counts{margin:0 0 .6rem;padding-left:var(--gutter);max-width:calc(var(--measure) + var(--gutter))}
+.counts{font-family:var(--small);font-size:.92rem;color:var(--soft);font-variant-numeric:tabular-nums}
+
+/* red pen notes */
+.notes{list-style:none;margin:0;padding:0}
+.notes li{display:grid;grid-template-columns:var(--gutter) 1fr;padding:.3rem 0;color:var(--pen);font-style:italic}
+.notes li::before{content:"\2192";justify-self:end;padding-right:1rem;font-style:normal}
+.notes a{color:inherit;text-decoration-color:var(--margin)}
+
+.tools{display:flex;flex-wrap:wrap;gap:.2rem 1.6rem;align-items:baseline;padding-left:var(--gutter);margin:0 0 .5rem;font-family:var(--small);font-size:.93rem}
+.filters{display:flex;gap:1.1rem}
+button.f{font:inherit;color:var(--soft);background:none;border:0;padding:.35rem 0;min-height:2.5rem;cursor:pointer;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.25em}
+button.f[aria-pressed=true]{color:var(--ink);font-weight:650;text-decoration-thickness:2px}
+.search{margin:0;display:flex;align-items:baseline;gap:.5rem;margin-left:auto}
+.search label{color:var(--soft)}
+input[type=search]{font:inherit;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--soft);border-radius:0;padding:.3rem .1rem;min-width:11rem}
+.shown{margin:0 0 .2rem;padding-left:var(--gutter);color:var(--soft);font-family:var(--small);font-size:.88rem}
+
+/* the log */
+#log{position:relative}
+#log::before{content:"";position:absolute;top:0;bottom:0;left:calc(var(--gutter) - .55rem);border-left:1px solid var(--margin)}
+.day h3{margin:1.7rem 0 .1rem;padding-left:var(--gutter);font-size:1rem;font-weight:700;font-variant-numeric:tabular-nums}
+.day ul{list-style:none;margin:0;padding:0}
+.entry{display:grid;grid-template-columns:var(--gutter) 1fr;padding:.55rem 0;border-top:1px solid var(--rule)}
+.day ul .entry:first-child{border-top:0}
+.st{font-family:var(--small);font-size:.86rem;font-weight:650;padding-top:.22rem;padding-right:1.1rem;text-align:right}
+.s-open{color:var(--open)}.s-merged{color:var(--merged)}.s-closed{color:var(--closed)}.s-draft{color:var(--draft)}
+.title{display:block}
+.where{display:block;font-family:var(--small);font-size:.86rem;color:var(--soft);font-variant-numeric:tabular-nums}
+.empty{padding-left:var(--gutter);color:var(--soft)}
+footer{padding-left:var(--gutter);margin-top:3rem;color:var(--soft);font-family:var(--small);font-size:.84rem}
+
+@media (max-width:600px){
+  html{font-size:106%}
+  :root{--gutter:0px}
+  .page{padding-top:2rem}
+  #log::before{display:none}
+  .notes li{display:block}
+  .notes li::before{content:"\2192\00a0";padding:0}
+  .entry{display:block}
+  .st{text-align:left;padding:0}
+  .search{margin-left:0;width:100%}
+  input[type=search]{flex:1;min-width:0}
+}
+@media print{body{background:#fff;color:#000}.tools,.skip{display:none}#log::before{display:none}}
