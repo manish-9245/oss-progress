@@ -71,6 +71,20 @@
    "waiting": []
   },
   {
+   "key": "coturn/coturn#2100",
+   "repo": "coturn/coturn",
+   "number": "2100",
+   "title": "Log the client address in request and auth failure messages",
+   "url": "https://github.com/coturn/coturn/pull/2100",
+   "state": "OPEN",
+   "updated": "2026-10-16",
+   "size": "+84/-23",
+   "cla": "n/a",
+   "review": "",
+   "failing": [],
+   "waiting": []
+  },
+  {
    "key": "envoyproxy/gateway#10302",
    "repo": "envoyproxy/gateway",
    "number": "10302",
@@ -248,9 +262,9 @@
    "number": "5739",
    "title": "Fix duplicate conversation for the same email fetched with different headers",
    "url": "https://github.com/freescout-help-desk/freescout/pull/5739",
-   "state": "DRAFT",
+   "state": "OPEN",
    "updated": "2026-10-16",
-   "size": "+8/-2",
+   "size": "+49/-2",
    "cla": "n/a",
    "review": "",
    "failing": [],
@@ -264,7 +278,7 @@
    "url": "https://github.com/freescout-help-desk/freescout/pull/5740",
    "state": "OPEN",
    "updated": "2026-10-16",
-   "size": "+4/-0",
+   "size": "+5/-0",
    "cla": "n/a",
    "review": "",
    "failing": [],
@@ -415,12 +429,26 @@
    "state": "OPEN",
    "updated": "2026-10-16",
    "size": "+11/-42",
-   "cla": "unsigned",
+   "cla": "signed",
    "review": "REVIEW_REQUIRED",
    "failing": [],
-   "waiting": [
-    "CLA to sign"
-   ]
+   "waiting": []
+  },
+  {
+   "key": "prometheus/prometheus#20022",
+   "repo": "prometheus/prometheus",
+   "number": "20022",
+   "title": "docs: clarify CompactHead ingestion contract and Head.gc append safety",
+   "url": "https://github.com/prometheus/prometheus/pull/20022",
+   "state": "OPEN",
+   "updated": "2026-10-16",
+   "size": "+9/-0",
+   "cla": "n/a",
+   "review": "REVIEW_REQUIRED",
+   "failing": [
+    "Go tests"
+   ],
+   "waiting": []
   },
   {
    "key": "qdrant/qdrant#11189",
@@ -512,7 +540,7 @@
    "number": "2473",
    "title": "fix: support StringMap values from map value sources (#1634)",
    "url": "https://github.com/urfave/cli/pull/2473",
-   "state": "OPEN",
+   "state": "CLOSED",
    "updated": "2026-10-16",
    "size": "+100/-1",
    "cla": "n/a",
@@ -761,25 +789,6 @@
    "waiting": []
   },
   {
-   "key": "prometheus/prometheus#20022",
-   "repo": "prometheus/prometheus",
-   "number": "20022",
-   "title": "docs: clarify CompactHead ingestion contract and Head.gc append safety",
-   "url": "https://github.com/prometheus/prometheus/pull/20022",
-   "state": "OPEN",
-   "updated": "2026-10-15",
-   "size": "+9/-0",
-   "cla": "n/a",
-   "review": "REVIEW_REQUIRED",
-   "failing": [
-    "Go tests on Windows",
-    "check"
-   ],
-   "waiting": [
-    "failing checks"
-   ]
-  },
-  {
    "key": "rusterlium/rustler#774",
    "repo": "rusterlium/rustler",
    "number": "774",
@@ -865,11 +874,130 @@
   }
  ],
  "counts": {
-  "OPEN": 29,
-  "DRAFT": 8,
+  "OPEN": 30,
+  "DRAFT": 7,
   "MERGED": 3,
-  "CLOSED": 19
+  "CLOSED": 20
  },
- "built": "2026-10-16 14:24",
- "since_label": "13 October 2026"
+ "built": "2026-10-16 15:25",
+ "since_label": "13 October 2026",
+ "claims": [
+  {
+   "repo": "topoteretes/cognee",
+   "number": "4786",
+   "title": "Hackathon [Feature]: Add Customer.io data-source connector",
+   "url": "https://github.com/topoteretes/cognee/issues/4786",
+   "status": "LOST",
+   "word": "Taken by someone else",
+   "claimed": "2026-10-13"
+  },
+  {
+   "repo": "mem0ai/mem0",
+   "number": "7588",
+   "title": "CLI project-wide deletion ignores --dry-run and issues a DELETE request",
+   "url": "https://github.com/mem0ai/mem0/issues/7588",
+   "status": "DONE",
+   "word": "PR sent",
+   "claimed": "2026-10-13"
+  },
+  {
+   "repo": "mem0ai/mem0",
+   "number": "7590",
+   "title": "Python OSS: system text parts cause add() to fail after memory persistence",
+   "url": "https://github.com/mem0ai/mem0/issues/7590",
+   "status": "DONE",
+   "word": "PR sent",
+   "claimed": "2026-10-13"
+  },
+  {
+   "repo": "mem0ai/mem0",
+   "number": "7605",
+   "title": "Python OSS: Memory.close() leaves owned local Qdrant clients open and prevents reopening the same path",
+   "url": "https://github.com/mem0ai/mem0/issues/7605",
+   "status": "DONE",
+   "word": "PR sent",
+   "claimed": "2026-10-13"
+  },
+  {
+   "repo": "mem0ai/mem0",
+   "number": "7614",
+   "title": "Cursor plugin: project_id resolves to the plugin cache folder hash (all workspaces share one app_id)",
+   "url": "https://github.com/mem0ai/mem0/issues/7614",
+   "status": "DONE",
+   "word": "PR sent",
+   "claimed": "2026-10-13"
+  },
+  {
+   "repo": "mem0ai/mem0",
+   "number": "7621",
+   "title": "docs: stale \"Current package version\" on pi-agent, deepseek, and openclaw integration pages",
+   "url": "https://github.com/mem0ai/mem0/issues/7621",
+   "status": "DONE",
+   "word": "PR sent",
+   "claimed": "2026-10-13"
+  },
+  {
+   "repo": "mem0ai/mem0",
+   "number": "7625",
+   "title": "[Bug] `LlmFactory.register_provider` is unusable: `LlmConfig` allowlist rejects registered providers",
+   "url": "https://github.com/mem0ai/mem0/issues/7625",
+   "status": "DONE",
+   "word": "PR sent",
+   "claimed": "2026-10-13"
+  },
+  {
+   "repo": "mem0ai/mem0",
+   "number": "7313",
+   "title": "Docs: BaseEmbedderConfig says openai_base_url defaults to api.openai.com, but two env vars come first",
+   "url": "https://github.com/mem0ai/mem0/issues/7313",
+   "status": "DONE",
+   "word": "PR sent",
+   "claimed": "2026-10-14"
+  },
+  {
+   "repo": "mem0ai/mem0",
+   "number": "7546",
+   "title": "VectorStoreBase.list returns nested list \u2014 ChromaDB and LangChain stores affected",
+   "url": "https://github.com/mem0ai/mem0/issues/7546",
+   "status": "DONE",
+   "word": "PR sent",
+   "claimed": "2026-10-14"
+  },
+  {
+   "repo": "ollama/ollama",
+   "number": "2588",
+   "title": "[Documentation request] API - <GenerateResponse> and other endpoints - options",
+   "url": "https://github.com/ollama/ollama/issues/2588",
+   "status": "DONE",
+   "word": "PR sent",
+   "claimed": "2026-10-14"
+  },
+  {
+   "repo": "prometheus/prometheus",
+   "number": "9982",
+   "title": "Update code comments for DB.CompactHead() and Head.gc() for append vs gc race",
+   "url": "https://github.com/prometheus/prometheus/issues/9982",
+   "status": "DONE",
+   "word": "PR sent",
+   "claimed": "2026-10-14"
+  },
+  {
+   "repo": "BerriAI/litellm",
+   "number": "37143",
+   "title": "[Bug]: Docs mention litellm.turn_on_message_logging, which doesn't exist",
+   "url": "https://github.com/BerriAI/litellm/issues/37143",
+   "status": "DROPPED",
+   "word": "Dropped: already fixed upstream",
+   "claimed": "2026-10-14"
+  },
+  {
+   "repo": "grafana/grafana",
+   "number": "74382",
+   "title": "Prometheus: PromLink component tests are flaky",
+   "url": "https://github.com/grafana/grafana/issues/74382",
+   "status": "DROPPED",
+   "word": "Dropped: component no longer exists",
+   "claimed": "2026-10-14"
+  }
+ ]
 }

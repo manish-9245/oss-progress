@@ -40,6 +40,13 @@ button.f[aria-pressed=true]{color:var(--ink);font-weight:650;text-decoration-thi
 input[type=search]{font:inherit;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--soft);border-radius:0;padding:.3rem .1rem;min-width:11rem}
 .shown{margin:0 0 .2rem;padding-left:var(--gutter);color:var(--soft);font-family:var(--small);font-size:.88rem}
 
+/* claims */
+.claims{list-style:none;margin:0;padding:0}
+.claims li{display:grid;grid-template-columns:var(--gutter) 1fr;padding:.5rem 0;border-top:1px solid var(--rule)}
+.claims li:first-child{border-top:0}
+.cst{font-family:var(--small);font-size:.86rem;font-weight:650;padding-top:.22rem;padding-right:1.1rem;text-align:right}
+.c-assigned,.c-done{color:var(--merged)}.c-waiting{color:var(--open)}.c-stale{color:var(--wait)}.c-lost,.c-closed{color:var(--closed)}.c-dropped{color:var(--draft)}
+
 /* the log */
 #log{position:relative}
 #log::before{content:"";position:absolute;top:0;bottom:0;left:calc(var(--gutter) - .55rem);border-left:1px solid var(--margin)}
@@ -61,7 +68,8 @@ footer{padding-left:var(--gutter);margin-top:3rem;color:var(--soft);font-family:
   #log::before{display:none}
   .notes li{display:block}
   .notes li::before{content:"\2192\00a0";padding:0}
-  .entry{display:block}
+  .entry,.claims li{display:block}
+  .cst{text-align:left;padding:0}
   .st{text-align:left;padding:0}
   .search{margin-left:0;width:100%}
   input[type=search]{flex:1;min-width:0}

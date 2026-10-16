@@ -52,6 +52,12 @@
         return '<li><span><a href="' + esc(r.url) + '">' + esc(r.repo) + ' #' + esc(r.number) + '</a>: ' + esc(r.waiting.join(', ')) + '</span></li>';
       }).join('');
     }
+    if (d.claims && d.claims.length) {
+      $('#claims-section').hidden = false;
+      $('#claims').innerHTML = d.claims.map(function (c) {
+        return '<li><span class="cst c-' + esc(c.status.toLowerCase()) + '">' + esc(c.word) + '</span><div><a class="title" href="' + esc(c.url) + '">' + esc(c.title) + '</a><span class="where">' + esc(c.repo) + ' #' + esc(c.number) + ' \u00b7 asked on ' + esc(dayWords(c.claimed)) + '</span></div></li>';
+      }).join('');
+    }
     $('#filters').innerHTML = SHOW.map(function (f) { return '<button type="button" class="f" data-f="' + f[0] + '" aria-pressed="' + (f[0] === 'ALL') + '">' + f[1] + '</button>'; }).join('');
     $('#filters').addEventListener('click', function (e) {
       var b = e.target.closest('button'); if (!b) return; show = b.dataset.f;
