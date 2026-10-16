@@ -268,7 +268,9 @@
    "cla": "n/a",
    "review": "",
    "failing": [],
-   "waiting": []
+   "waiting": [
+    "question to answer"
+   ]
   },
   {
    "key": "freescout-help-desk/freescout#5740",
@@ -448,7 +450,9 @@
    "failing": [
     "Go tests"
    ],
-   "waiting": []
+   "waiting": [
+    "failing checks"
+   ]
   },
   {
    "key": "qdrant/qdrant#11189",
@@ -879,7 +883,7 @@
   "MERGED": 3,
   "CLOSED": 20
  },
- "built": "2026-10-16 15:25",
+ "built": "2026-10-16 16:03",
  "since_label": "13 October 2026",
  "claims": [
   {
